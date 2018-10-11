@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/static/css/bootstrap/bootstrap.min.css')
+    link(rel='stylesheet', href='/static/css/signin.css')
+  body
+block content
+  <div class="row">
+  <div class="col-sm-6">
+  <div class="card">
+  <div class="card-body">
+  <h5 class="card-title">聊天室1</h5>
+  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  <a href="/chat?roomid=room1" class="btn btn-primary">进入</a>
+  </div>
+  </div>
+  </div>
+  <div class="col-sm-6">
+  <div class="card">
+  <div class="card-body">
+  <h5 class="card-title">聊天室2</h5>
+  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  <a href="/chat?roomid=room2" class="btn btn-primary">进入</a>
+  </div>
+  </div>
+  </div>
+  </div>

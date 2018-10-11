@@ -1,0 +1,21 @@
+doctype html
+html
+head
+            title= title
+            link(rel='stylesheet', href='/static/css/bootstrap/bootstrap.min.css')
+            link(rel='stylesheet', href='/static/css/signin.css')
+body
+    block content
+<form class="form-signin" action="/login" method="post">
+<img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+<h1 class="h3 mb-3 font-weight-normal">登录聊天室</h1>
+<label for="inputEmail" class="sr-only">用户名</label>
+<input type="text" name="name" id="inputEmail" class="form-control" placeholder="用户名" required autofocus>
+<label for="inputPassword" name="password" class="sr-only">密码</label>
+<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+<div class="row">
+<button class="btn btn-lg btn-primary btn-block col" type="submit" >登录</button>
+<button class="col" onclick="window.location='/signup'">去注册</button>
+</div>
+<label>#{error}</label>
+</form>

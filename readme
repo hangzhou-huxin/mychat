@@ -1,0 +1,4 @@
+1.通过router来定位到具体的controller
+2.通过controller作为控制层，调用model层处理简单的业务，并跳转页面
+3.由于node.js不适合处理业务，所以其相应处理的系统应不需要业务层
+4.通过Express的全局实例app，显式的通过use(path,router)实现系统的入口
