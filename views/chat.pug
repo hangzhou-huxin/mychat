@@ -5,7 +5,9 @@ html
     body
 block content
     <div id='content'>
-    <div id='session'>#{sessionId}</div>
+    <div><a href="/">返回首页</a><a href="/">退现</a></div>
+    <div><a href="/logout">退出</a></div>
+    <div id='session' style="display:none;">#{sessionId}</div>
     <div id='room'>#{roomId}</div>
     <div id='room-list'></div>
     <div id='messages'></div>

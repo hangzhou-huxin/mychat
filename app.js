@@ -13,8 +13,8 @@ var app = express();
 
 app.use(session({
     secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: true
+    resave: false ,
+    saveUninitialized: false
 }));
 
 // view engine setup

@@ -24,6 +24,7 @@ router.get('/', auth.userRequired, main.showMain);
 
 //登录页
 router.get('/login', sign.showLogin);
+router.get('/logout', sign.logout);  // 登出
 
 router.post('/login',sign.login) ;
 

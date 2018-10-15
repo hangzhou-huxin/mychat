@@ -19,12 +19,6 @@ exports.signup = function (req, res, next) {
   var pass      = validator.trim(req.body.pass);
   var rePass    = validator.trim(req.body.re_pass);
 
-  //var ep = new eventproxy();
-  //ep.fail(next);
-  //ep.on('prop_err', function (msg) {
-   // res.status(422);
-   // res.render('signup', {error: msg, loginname: loginname});
-  //});
   // 验证信息的正确性
   if ([loginname, pass, rePass].some(function (item) { return item === ''; })) {
     //ep.emit('prop_err', '信息不完整。');
@@ -91,6 +85,9 @@ exports.showLogin = function (req, res) {
 
 
 
+
+
+
 /**
  * Handle user login.
  *
@@ -125,7 +122,7 @@ exports.login = function (req, res, next) {
 
     });
 
-  //req.session.user = loginname ;
+   // req.session.user = loginname ;
   //authMiddleWare.gen_session(user, res);
 
 
@@ -136,7 +133,7 @@ exports.login = function (req, res, next) {
 // logout
 exports.logout = function (req, res, next) {
   req.session.destroy();
-  //res.clearCookie(config.auth_cookie_name, { path: '/' });
-  res.redirect('/');
+  res.clearCookie("io", { path: '/' });
+  return res.redirect('login');
 };
 
